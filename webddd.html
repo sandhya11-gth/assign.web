@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopEasy — Product Card</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .header {
+      background: #222;
+      color: white;
+      padding: 15px 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px;
+      gap: 30px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      color: #555;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .features {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .features span + span::before {
+      content: " | ";
+      color: #aaa;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .price .new {
+      color: #e53935;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .price .old {
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .btn {
+      background: #ff7043;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #f4511e;
+    }
+
+    .image-box {
+      width: 350px;
+      height: 250px;
+      border: 3px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 800px) {
+      .product {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+
+      .image-box {
+        width: 100%;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="header">ShopEasy</div>
+
+    <div class="product">
+
+      <!-- LEFT SIDE INFO -->
+      <div class="info">
+        <h2>Premium Wrist Watch</h2>
+        <p>Stainless Steel Body • Waterproof • Stylish Look</p>
+
+        <div class="features">
+          <span>Stainless Steel</span>
+          <span>Waterproof</span>
+          <span>Stylish Look</span>
+        </div>
+
+        <div class="price">
+          <span class="new">₹1239</span>
+          <span class="old">₹1399</span>
+        </div>
+
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <!-- RIGHT SIDE IMAGE -->
+      <div class="image-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq2G1_oOLOy4prfUTcZoVLnmEFWzkslzfWGQ&s" alt="Wrist Watch Image">
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
